@@ -1,3 +1,6 @@
+https://lucid.app/lucidchart/6d5de222-9407-450c-8407-88bca1f64b3e/edit?viewport_loc=-1211%2C34%2C1479%2C823%2C0_0&invitationId=inv_c8c7f367-9ad9-4edb-8fc9-49b34d7aca82
+
+
 -- users table start
 CREATE TABLE Users (
     user_id int primary key,
@@ -57,6 +60,11 @@ INSERT INTO Bookings (booking_id, user_id, match_id, seat_number, payment_status
 --  booking table end
 
 
+-- select * from bookings;
 
 
-select * from bookings;
+
+
+-- Query 1: Retrieve all upcoming football matches belonging to the 'Champions League' where the match status is 'Available'.
+
+select match_id, fixture, base_ticket_price from matches where tournament_category = 'Champions League' and match_status = 'Available';
